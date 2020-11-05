@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "sliders",
+  "info": {
+    "name": "sliders",
+    "description": "Slider Images will be stored here"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
