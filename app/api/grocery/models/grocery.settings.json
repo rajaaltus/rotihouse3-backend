@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groceries",
+  "info": {
+    "name": "Grocery",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "name": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "kg",
+        "g",
+        "litre",
+        "box",
+        "pack",
+        "bottle",
+        "unit"
+      ]
+    },
+    "purchase_price": {
+      "type": "decimal"
+    },
+    "selling_price": {
+      "type": "decimal"
+    },
+    "available_qty": {
+      "type": "decimal"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "for_sale": {
+      "type": "boolean"
+    }
+  }
+}
