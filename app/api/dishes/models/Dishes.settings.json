@@ -38,8 +38,8 @@
       "type": "boolean"
     },
     "category": {
-      "model": "categories",
-      "via": "dishes"
+      "via": "dishes",
+      "model": "categories"
     },
     "type": {
       "enum": [

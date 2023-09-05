@@ -12,7 +12,8 @@
       "created_at",
       "updated_at"
     ],
-    "comment": ""
+    "comment": "",
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
@@ -21,11 +22,15 @@
     "image": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "dishes": {
-      "via": "category",
-      "collection": "dishes"
+      "collection": "dishes",
+      "via": "category"
+    },
+    "isactive": {
+      "type": "boolean"
     }
   }
 }
