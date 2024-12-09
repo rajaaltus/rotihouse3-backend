@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   strapi:
     image: strapi/strapi
@@ -9,11 +9,11 @@ services:
       DATABASE_NAME: strapi
       DATABASE_USERNAME: strapi
       DATABASE_PASSWORD: strapi
-      DATABASE_SSL: 'false'
+      DATABASE_SSL: "false"
     volumes:
       - ./app:/srv/app
     ports:
-      - '1337:80'
+      - "1337:1337"
     depends_on:
       - mysql
 
@@ -28,14 +28,14 @@ services:
       MYSQL_USER: strapi
       MYSQL_PASSWORD: strapi
     ports:
-      - '3306:3306'
+      - "3306:3310"
   phpmyadmin:
     depends_on:
       - mysql
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - '8080:80'
+      - "8080:8080"
     environment:
       PMA_HOST: mysql
       MYSQL_ROOT_PASSWORD: strapi
