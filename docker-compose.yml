@@ -35,7 +35,7 @@ services:
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - "8080:8080"
+      - "8090:8090"
     environment:
       PMA_HOST: mysql
       MYSQL_ROOT_PASSWORD: strapi
