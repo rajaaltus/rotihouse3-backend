@@ -28,7 +28,7 @@ services:
       MYSQL_USER: strapi
       MYSQL_PASSWORD: strapi
     ports:
-      - "3306:3310"
+      - "3310:3306"
   phpmyadmin:
     depends_on:
       - mysql
