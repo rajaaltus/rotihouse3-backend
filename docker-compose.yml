@@ -10,13 +10,13 @@ services:
       DATABASE_USERNAME: strapi
       DATABASE_PASSWORD: strapi
       DATABASE_SSL: "false"
-    command: "yarn develop"
     volumes:
       - ./app:/srv/app
     ports:
       - "1337:1337"
     depends_on:
       - mysql
+    command: "strapi develop"
 
   mysql:
     image: mysql
